@@ -286,14 +286,15 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 /* ==== News Slider ==== */
 
 .news .button {
-  color: var(--secondary-color);
+  color: #fff;
   border: 2px solid var(--secondary-color);
   display: inline-block;
-  border-radius: 0;
+  border-radius: 8px0;
   font-weight: 600;
   white-space: nowrap;
   height: max-content;
   vertical-align: middle;
+  background: var(--secondary-color);
 }
 .news-content .news-slider,
 .news-content,
@@ -373,7 +374,7 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   display: inline-block;
   font-weight: bold;
   font-size: 1rem;
-  padding: 15px 50px;
+  padding: 1rem 3rem;
   margin-top: 15px;
 }
 
@@ -426,21 +427,24 @@ section.trending {
   margin: 15px 0;
 }
 
-.presenter .item {
+.presenter .item,
+.present .item {
   height: 400px;
   display: block;
   margin: 0 15px;
   position: relative;
 }
 
-.presenter .item img {
+.presenter .item img,
+.present .item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   -o-object-fit: cover;
 }
 
-.presenter .item .slide-content {
+.presenter .item .slide-content,
+.present .item .slide-content {
   position: absolute;
   left: 0;
   bottom: 0px;
@@ -454,14 +458,16 @@ section.trending {
   text-align: center;
 }
 
-.presenter .item .slide-content p {
+.presenter .item .slide-content p,
+.present .item .slide-content p {
   color: #fff;
   font-weight: 600;
   vertical-align: middle;
   margin: auto 0;
 }
 
-.presenter .item .slide-content .social-icon i {
+.presenter .item .slide-content .social-icon i,
+.present .item .slide-content .social-icon i {
   font-size: 24px;
   height: 40px;
   width: 40px;
@@ -626,4 +632,40 @@ footer.footer {
 .footer hr {
   color: #d0d0d0;
   background: #d0d0d0;
+}
+
+/* ==== Other Pages ==== */
+
+section.page {
+  background: #d0d0d0;
+}
+
+section.page.pro .button {
+  background: var(--secondary-color);
+  color: #fff;
+  display: inline-block;
+}
+/* 
+.pro .card {
+  width: 100%;
+  position: relative;
+} */
+
+.pro .col-md-4,
+.pro .col-sm-6,
+.pro .col-6 {
+  padding: 10px;
+  /* padding-left: 10px; */
+}
+
+.present .col-md-4,
+.present .col-sm-6,
+.present .col-6 {
+  padding: 15px;
+}
+
+section.pro .card .time {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
 }

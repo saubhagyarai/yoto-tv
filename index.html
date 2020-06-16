@@ -50,7 +50,9 @@
       <div class="container">
         <div class="row">
           <div class="nav-logo">
-            <img src="img/logo123.png" alt="" />
+            <a href="#">
+              <img src="img/logo123.png" alt="" />
+            </a>
           </div>
 
           <div class="nav-content">
@@ -71,13 +73,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Programs</a>
+                    <a class="nav-link" href="pro.html">Programs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Presenters</a>
+                    <a class="nav-link" href="presenter.html">Presenters</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Yoho</a>
@@ -545,7 +547,7 @@
         });
       }
 
-      //
+      //Main Slider
       $(document).ready(function () {
         $(".slider").slick({
           dots: true,
@@ -554,6 +556,8 @@
           autoplaySpeed: 3000,
         });
       });
+
+      // Presenter Slider
 
       $(document).ready(function () {
         $(".presenter-slide").slick({
