@@ -132,7 +132,7 @@ section {
 /* ==== HEADER ==== */
 .header {
   background: rgb(0, 33, 50);
-  background: rgba(0, 33, 50, 0.5);
+  background: rgba(0, 33, 50, 0.7);
   z-index: 1;
   position: absolute;
   width: 100%;
