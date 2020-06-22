@@ -132,12 +132,6 @@ section {
 /* ==== HEADER ==== */
 .header {
   background: rgb(0, 33, 50);
-  background: rgba(0, 33, 50, 0.7);
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-
-  /* opacity: 0.5; */
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -150,8 +144,18 @@ section {
   padding: 0px 10px;
 }
 
+.navbar-light .navbar-nav a.nav-link.active:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #fff !important;
+  width: 50px;
+}
+
 .navbar-light .navbar-nav .nav-link:hover {
-  color: lightgray;
+  color: var(--secondary-color);
 }
 
 .nav-logo {
@@ -648,7 +652,7 @@ footer.footer {
   width: 40px;
   height: 40px;
   font-size: 1.5rem;
-  line-height: 35px;
+  line-height: 40px;
   border: 2px solid #d0d0d0;
   text-align: center;
   border-radius: 50%;
