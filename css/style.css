@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap"); */
 
 :root {
   --primary-color: rgb(0, 33, 50);
@@ -32,7 +32,7 @@ h1 {
 .section-title h2 {
   font-size: 1.5rem;
   color: var(--primary-color);
-  font-family: "Tinos", sans-serif;
+  /* font-family: "Tinos", sans-serif; */
   font-weight: 500;
   text-transform: uppercase;
   position: relative;
@@ -54,7 +54,7 @@ h1 {
 h4.card-title {
   margin-bottom: 0px;
   font-weight: bold;
-  font-family: "Tinos", sans-serif;
+  /* font-family: "Tinos", sans-serif; */
   font-weight: bold;
   font-size: 1.5rem;
 }
