@@ -534,6 +534,7 @@ section.trending {
   /* width: 12rem; */
   padding: 0.7rem 3rem;
   font-weight: 500;
+  min-width: 13.4rem;
 }
 
 .download .btn1 .button:hover {
