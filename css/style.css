@@ -16,7 +16,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: "Chivo", sans-serif;
-  font-weight: 300;
+  font-weight: normal;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -131,7 +131,13 @@ section {
 
 /* ==== HEADER ==== */
 .header {
-  background: var(--primary-color);
+  background: rgb(0, 33, 50);
+  background: rgba(0, 33, 50, 0.5);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+
+  /* opacity: 0.5; */
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -183,7 +189,7 @@ section {
 
 /* ==== Slider ==== */
 .slider .item {
-  height: 620px;
+  height: 720px;
   position: relative;
   width: 100%;
 }
@@ -258,6 +264,7 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   width: 100%;
   background: #fff;
   margin: 15px 0;
+  padding: 12px;
 }
 
 .news-card .img-wrap {
@@ -363,9 +370,10 @@ section.programs {
   padding: 10px;
   bottom: -10px;
   left: 0;
-  background: rgba(128, 128, 128, 0.5);
+  background: rgba(255, 255, 255, 0.32);
   overflow: hidden;
   width: 100%;
+  font-weight: normal;
 }
 
 .programs article a p {
@@ -479,9 +487,10 @@ section.trending {
   width: 40px;
   color: #fff;
   margin-right: 5px;
-  padding: 5px;
   border: 1.5px solid #fff;
   border-radius: 50%;
+  padding: 0;
+  line-height: 40px;
 }
 
 .presenter .slick-dots li.slick-active button:before {
@@ -495,6 +504,9 @@ section.trending {
 
 /* === Download Section ==== */
 
+section.download {
+  padding: 5rem 0;
+}
 .download {
   background: rgba(0, 33, 50, 0.9);
   color: #fff;
@@ -547,6 +559,8 @@ section.trending {
   top: -90px;
   width: auto;
   object-fit: cover;
+  transform: scale(1.1);
+  transform-origin: left bottom;
 }
 
 /* === Footer === */
@@ -646,7 +660,7 @@ footer.footer {
 }
 .footer .last-footer {
   /* background: var(--secondary-color); */
-  padding: 0.7rem 0;
+  padding: 0 0 14px;
   text-align: center;
 }
 
