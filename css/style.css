@@ -87,12 +87,12 @@ ul {
 }
 
 section.slider {
-  padding-bottom: 3rem;
-  padding-top: 0px;
+  /* padding-bottom: 3rem; */
+  padding: 0px;
 }
 
 section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .scrollTop {
@@ -174,6 +174,7 @@ section {
   height: auto;
   vertical-align: middle;
   padding-bottom: 3px;
+  margin: auto;
 }
 .top-text {
   margin: 10px 0px 0px 35px;
@@ -213,7 +214,7 @@ section {
 }
 
 .slider ul.slick-dots {
-  bottom: 15%;
+  bottom: 5%;
   color: #fff;
 }
 
@@ -236,6 +237,7 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
     var(--primary-color) 0%,
     var(--secondary-color) 100%
   );
+  background: linear-gradient(90deg, rgb(0, 33, 50) 50%, rgb(28, 155, 251) 50%);
 }
 /* 
 .news .img-wrapper {
@@ -336,14 +338,14 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 
 /* ==== Programs Section ==== */
 
-section.programs {
-  padding-top: 0;
+.programs {
+  /* background: linear-gradient(90deg, rgb(0, 33, 50) 50%, rgb(28, 155, 251) 50%); */
+  /* --primary-color: rgb(0, 33, 50);
+  --secondary-color: rgb(28, 155, 251); */
 }
 
 .programs article {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  /* overflow: hidden; */
+  padding: 5px;
 }
 
 .programs article a {
@@ -397,6 +399,7 @@ section.programs {
   font-size: 1rem;
   padding: 1rem 3rem;
   margin-top: 15px;
+  border: 1px solid #fff;
 }
 
 .programs a.button:hover {
@@ -404,10 +407,6 @@ section.programs {
 }
 
 /* ==== Trending Section ==== */
-
-section.trending {
-  background: rgba(128, 128, 128, 0.1);
-}
 
 .trending article {
   padding-top: 15px;
@@ -434,6 +433,16 @@ section.trending {
 }
 
 /* ==== Presenters Section ==== */
+
+.presenter {
+  background: rgba(128, 128, 128, 0.1);
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.presenter .section-title h2 {
+  color: #fff;
+}
 
 .presenter .presenter-slide {
   margin: 15px 0;
@@ -510,9 +519,6 @@ section.trending {
 
 section.download {
   padding: 5rem 0;
-  background: rgba(0, 33, 50, 0.9);
-  background: rgba(128, 128, 128, 0.1);
-
   color: #000000;
   margin-top: 30px;
 }
@@ -570,7 +576,7 @@ section.download {
 /* === Footer === */
 
 footer.footer {
-  padding-top: 3rem;
+  padding-top: 4rem;
   background: var(--primary-color);
   /* background: url(../img/cover.jpg); */
   color: #fff;
