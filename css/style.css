@@ -130,8 +130,28 @@ section {
 /* ==== END OF GENERIC SECTION ==== */
 
 /* ==== HEADER ==== */
+
 .header {
+  background: rgba(0, 33, 50, 0.2);
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+}
+.page-header {
   background: rgb(0, 33, 50);
+  position: fixed;
+}
+
+header.sticky {
+  background: var(--primary-color);
+}
+
+header.sticky .nav-logo img {
+  height: 65px;
+  width: 55px;
+}
+.navbar {
+  padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -139,9 +159,10 @@ section {
   font-size: 16px;
   line-height: 1.5;
   margin: 5px;
-  font-weight: 400;
+  font-weight: normal;
   color: #fff;
   padding: 0px 10px;
+  transition: 0.6s;
 }
 
 .navbar-light .navbar-nav a.nav-link.active:before {
@@ -158,15 +179,11 @@ section {
   color: var(--secondary-color);
 }
 
-.nav-logo {
-  width: 10%;
-  margin: auto;
-}
 .nav-logo img {
   width: 80px;
   height: 90px;
   margin: 0;
-  padding: 5px 0;
+  transition: 0.6s;
 }
 
 .nav-content {
@@ -239,28 +256,10 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   );
   background: linear-gradient(90deg, rgb(0, 33, 50) 50%, rgb(28, 155, 251) 50%);
 }
-/* 
-.news .img-wrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-.news .img-wrapper img {
-  width: 100%;
-}
-.news .card .card-body {
-  padding: 5px;
-}
-.news .card p {
-  color: #000000;
-  margin-bottom: 5px;
-  line-height: 1.3;
-} */
 
 .news .yoho-img img {
   height: 150px;
   margin-top: 15px;
-  /* position: absolute; */
 }
 
 .news h5 {
@@ -330,19 +329,9 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   color: #fff;
 }
 
-/* .news img {
-  margin: 5px;
-} */
-
 /* ==== END OF NEWS SECTION ==== */
 
 /* ==== Programs Section ==== */
-
-.programs {
-  /* background: linear-gradient(90deg, rgb(0, 33, 50) 50%, rgb(28, 155, 251) 50%); */
-  /* --primary-color: rgb(0, 33, 50);
-  --secondary-color: rgb(28, 155, 251); */
-}
 
 .programs article {
   padding: 5px;
@@ -352,7 +341,6 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   position: relative;
   height: 300px;
   display: block;
-  /* margin: auto; */
   overflow: hidden;
 }
 
@@ -371,6 +359,59 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   transform: scale(1.1);
 }
 
+.programs .play-btn {
+  background: rgba(28, 155, 251, 1);
+  color: #fff;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  /* left: 0; */
+  right: 20px;
+  /* top: 0; */
+  bottom: 20px;
+  margin: auto;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 9999999;
+}
+.programs .play-btn i {
+  line-height: 40px;
+  margin-left: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+.programs .play-btn::before,
+.programs .play-btn::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+}
+
+.programs .play-btn::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .programs article a .text {
   position: absolute;
   padding: 10px;
@@ -384,6 +425,14 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 
 .programs article a p {
   margin-bottom: 10px;
+}
+.programs article a .text p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.programs article a p i {
+  margin-right: 5px;
 }
 
 .programs .btn-section {
@@ -645,13 +694,6 @@ footer.footer {
 .footer .social-icon a {
   display: inline-block;
   margin-right: 1rem;
-  /* width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  border: 2px solid #d0d0d0;
-  text-align: center;
-  border-radius: 50%;
-  color: #d0d0d0; */
 }
 
 .footer .social-icon a i {
@@ -669,7 +711,6 @@ footer.footer {
   border: 2px solid var(--secondary-color);
 }
 .footer .last-footer {
-  /* background: var(--secondary-color); */
   padding: 0 0 14px;
   text-align: center;
 }
@@ -686,6 +727,7 @@ section.page {
   position: relative;
   justify-content: center;
   align-items: center;
+  padding: 9rem 0 4rem 0;
 }
 
 section.page.pro .button {
@@ -693,11 +735,6 @@ section.page.pro .button {
   color: #fff;
   display: inline-block;
 }
-/* 
-.pro .card {
-  width: 100%;
-  position: relative;
-} */
 
 .pro .col-md-4,
 .pro .col-sm-6,

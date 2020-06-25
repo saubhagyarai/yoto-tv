@@ -12,16 +12,6 @@
     />
     <meta property="og:site_name" content="Yoho Television" />
 
-    <!-- Google Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400;500;700;800&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap");
-    </style>
     <!-- Bootstrap Link -->
     <link
       rel="stylesheet"
@@ -46,55 +36,50 @@
     </div>
 
     <!-- Header Section -->
-    <header class="header">
+    <header class="header page-header">
       <div class="container">
-        <div class="row">
-          <div class="nav-logo">
-            <a href="#">
+        <div class="nav-content">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand nav-logo" href="#">
               <img src="img/logo123.png" alt="" />
             </a>
-          </div>
 
-          <div class="nav-content">
-            <div class="top-text">Today's Special : Bahas 9:30pm</div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pro.html">Programs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="presenter.html">Presenters</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="schelude.html">Schedule</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <a class="button" target="_blank" href="#">
-                <img src="img/tube.svg.webp" alt="" />
-                <span></span>
-              </a>
-            </nav>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pro.html">Programs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="presenter.html">Presenters</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="schedule.html">Schedule</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <a class="button" target="_blank" href="#">
+              <img src="img/tube.svg.webp" alt="" />
+              <span></span>
+            </a>
+          </nav>
         </div>
       </div>
     </header>
@@ -357,6 +342,13 @@
         });
       }
 
+      // Navbar
+
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
       //Main Slider
       $(document).ready(function () {
         $(".slider").slick({
@@ -372,7 +364,7 @@
       $(document).ready(function () {
         $(".presenter-slide").slick({
           dots: true,
-          autoplay: true,
+          autoplay: false,
           arrows: false,
           autoplaySpeed: 3000,
           infinite: true,
