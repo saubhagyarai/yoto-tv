@@ -1208,10 +1208,6 @@ section
 }
 
 @media only screen and (max-width: 768px) {
-  .news .yoho-img img {
-    /* display: none; */
-  }
-
   section.download {
     padding: 3rem 0;
   }
@@ -1290,7 +1286,7 @@ section
 
   .presenter .item,
   .present .item {
-    height: 350px;
+    height: 400px;
   }
 
   .presenter .slick-prev,
