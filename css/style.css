@@ -4,6 +4,11 @@
 :root {
   --primary-color: rgb(0, 33, 50);
   --secondary-color: rgb(28, 155, 251);
+  --section-background: linear-gradient(
+    45deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
   /* --secondary-color: rgb(220, 24, 192); */
 }
 * {
@@ -37,7 +42,7 @@ h1 {
   text-transform: uppercase;
   position: relative;
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 2rem;
 }
 
 .section-title h2:after {
@@ -308,14 +313,8 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 /* ==== News Slider ==== */
 
 .news {
-  background: var(--primary-color);
+  background: var(--section-background);
   color: #fff;
-  background: linear-gradient(
-    45deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  background: linear-gradient(90deg, rgb(0, 33, 50) 50%, rgb(28, 155, 251) 50%);
 }
 
 .news .yoho-img {
@@ -407,6 +406,14 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 
 /* ==== Programs Section ==== */
 
+.programs .row {
+  margin: 0px;
+  padding: 5px;
+}
+
+.programs .col-12 {
+  padding: 10px;
+}
 .programs article {
   padding: 5px;
 }
@@ -509,18 +516,18 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 
 .programs .btn-section {
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .programs a.button {
-  color: #fff;
-  background-color: var(--secondary-color);
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 1rem 3rem;
-  margin-top: 15px;
   border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  background: var(--secondary-color);
+  padding: 0.7rem 3rem;
+  font-weight: 500;
+  min-width: 13.4rem;
+  margin-top: 1rem;
 }
 
 .programs a.button:hover {
@@ -552,12 +559,27 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 .trending article .card-body {
   padding: 10px;
 }
+.trending .slick-prev {
+  left: calc(100% - 90px);
+  top: -40px;
+}
 
+.trending .slick-next {
+  top: -40px;
+  right: 30px;
+}
+.trending .slick-prev:before,
+.trending .slick-next:before {
+  font-family: "slick";
+  font-size: 30px;
+  line-height: 30px;
+  opacity: 1;
+  color: var(--secondary-color);
+}
 /* ==== Presenters Section ==== */
 
 .presenter {
-  background: rgba(128, 128, 128, 0.1);
-  background: var(--primary-color);
+  background: var(--section-background);
   color: #fff;
 }
 
@@ -566,7 +588,7 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
 }
 
 .presenter .presenter-slide {
-  margin: 15px 0;
+  margin: 15px -15px;
 }
 
 .presenter .item,
@@ -614,6 +636,13 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   margin: auto 0;
 }
 
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .presenter .item .slide-content .social-icon i,
 .present .item .slide-content .social-icon i {
   font-size: 24px;
@@ -625,6 +654,28 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   border-radius: 50%;
   padding: 0;
   line-height: 40px;
+}
+
+.presenter .slick-prev {
+  left: calc(100% - 90px);
+  top: -65px;
+}
+
+.presenter .slick-next {
+  top: -65px;
+  right: 30px;
+}
+.presenter .slick-prev:before,
+.presenter .slick-next:before {
+  font-family: "slick";
+  font-size: 30px;
+  line-height: 30px;
+  opacity: 1;
+  /* color: var(--secondary-color); */
+}
+.presenter .slick-dots {
+  position: absolute;
+  bottom: -35px;
 }
 
 .presenter .slick-dots li.slick-active button:before {
@@ -669,7 +720,6 @@ section.download {
   display: inline-block;
   color: #fff;
   background: var(--secondary-color);
-  /* width: 12rem; */
   padding: 0.7rem 3rem;
   font-weight: 500;
   min-width: 13.4rem;
@@ -1154,5 +1204,120 @@ section
     bottom: 30%;
     text-align: center;
     vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .news .yoho-img img {
+    /* display: none; */
+  }
+
+  section.download {
+    padding: 3rem 0;
+  }
+  .download img {
+    height: 400px;
+    transform: scale(0.8);
+    padding: 0;
+    /* left: -50px; */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: 2rem 0;
+  }
+
+  .section-title h2 {
+    margin-bottom: 1rem;
+  }
+  .nav-logo img {
+    width: 50px;
+    height: 60px;
+    margin: 0;
+  }
+
+  header.sticky .nav-logo img {
+    height: 55px;
+    width: 45px;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .header .navbar .nav-btn {
+    color: #fff;
+    padding: 5px 15px;
+  }
+
+  .header .navbar .navbar-toggler {
+    font-size: 25px;
+  }
+
+  .slider .item {
+    height: 430px;
+  }
+
+  .programs article a {
+    height: 180px;
+  }
+  .news {
+    padding-top: 3rem;
+  }
+
+  .news .yoho-img img {
+    display: none;
+  }
+  .news .news-card .img-wrap img {
+    height: 90px;
+  }
+
+  .trending .row {
+    margin: -10px;
+  }
+
+  .trending article {
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .trending .slick-prev,
+  .trending .slick-next {
+    top: -20px;
+  }
+
+  .presenter .item,
+  .present .item {
+    height: 250px;
+  }
+
+  .presenter .slick-prev,
+  .presenter .slick-next {
+    top: -40px;
+  }
+
+  .presenter .slick-dots {
+    bottom: -20px;
+  }
+
+  section.download {
+    padding: 2rem 0;
+  }
+  .download img {
+    display: none;
+  }
+  .download .btns {
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  footer.footer {
+    padding-top: 1rem;
+  }
+
+  .footer h5 {
+    margin-top: 1rem;
   }
 }
