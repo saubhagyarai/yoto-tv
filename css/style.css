@@ -722,7 +722,7 @@ section.download {
   background: var(--secondary-color);
   padding: 0.7rem 3rem;
   font-weight: 500;
-  min-width: 13.4rem;
+  /* min-width: 13.4rem; */
 }
 
 .download .btn1 .button:hover {
@@ -1217,9 +1217,19 @@ section
     padding: 0;
     /* left: -50px; */
   }
+
+  .download .btn1 .button {
+    padding: 10px 15px;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
+  .news .yoho-img img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
   body {
     font-size: 14px;
   }
@@ -1229,6 +1239,10 @@ section
 
   .section-title h2 {
     margin-bottom: 1rem;
+  }
+
+  .scrollTop {
+    right: 20px;
   }
   .nav-logo img {
     width: 50px;
@@ -1256,6 +1270,10 @@ section
     height: 430px;
   }
 
+  .programs a.button {
+    width: 100%;
+    text-align: center;
+  }
   .programs article a {
     height: 180px;
   }
@@ -1286,7 +1304,8 @@ section
 
   .presenter .item,
   .present .item {
-    height: 400px;
+    height: 350px;
+    width: 250px;
   }
 
   .presenter .slick-prev,
