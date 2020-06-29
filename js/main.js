@@ -1,6 +1,3 @@
-{
-  /* <script type="text/javascript"> */
-}
 // Display button in scroll down
 window.addEventListener("scroll", function () {
   var scroll = document.querySelector(".scrollTop");
@@ -20,6 +17,16 @@ window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+// Active navbar
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll(".nav-item a");
+const menuLength = menuItem.length;
+for (let i = 0; i < menuLength; i++) {
+  if (menuItem[i].href === currentLocation) {
+    menuItem[i].className += " active-nav";
+  }
+}
 
 //Main Slider
 $(document).ready(function () {

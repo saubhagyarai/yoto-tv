@@ -176,7 +176,7 @@ header.sticky .nav-logo img {
   position: relative;
 }
 
-.navbar-light .navbar-nav .active-nav a:before {
+.navbar-light .navbar-nav a.active-nav:before {
   position: absolute;
   content: "";
   bottom: 0;
