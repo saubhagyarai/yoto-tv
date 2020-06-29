@@ -12,16 +12,6 @@
     />
     <meta property="og:site_name" content="Yoho Television" />
 
-    <!-- Google Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400;500;700;800&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap");
-    </style>
     <!-- Bootstrap Link -->
     <link
       rel="stylesheet"
@@ -44,60 +34,58 @@
     <div class="scrollTop" onclick="scrollToTop();">
       <i class="fa fa-chevron-up"></i>
     </div>
+    <!-- End of Top scroll -->
 
     <!-- Header Section -->
-    <header class="header">
+    <header class="header page-header">
       <div class="container">
-        <div class="row">
-          <div class="nav-logo">
-            <a href="#">
+        <div class="nav-content">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand nav-logo" href="#">
               <img src="img/logo123.png" alt="" />
             </a>
-          </div>
 
-          <div class="nav-content">
-            <div class="top-text">Today's Special : Bahas 9:30pm</div>
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pro.html">Programs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="presenter.html">Presenters</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="schedule.html">Schedule</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <a class="button" target="_blank" href="#">
-                <img src="img/tube.svg.webp" alt="" />
-                <span></span>
-              </a>
-            </nav>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active-nav">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active-nav">
+                  <a class="nav-link" href="pro.html">Programs</a>
+                </li>
+                <li class="nav-item active-nav">
+                  <a class="nav-link" href="presenter.html">Presenters</a>
+                </li>
+                <li class="nav-item active-nav">
+                  <a class="nav-link" href="schedule.html">Schedule</a>
+                </li>
+                <li class="nav-item active-nav">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <a class="button nav-btn" target="_blank" href="#">
+              YouTube
+              <div class="yt-btn"><i class="fa fa-play"></i></div>
+            </a>
+          </nav>
         </div>
       </div>
     </header>
+    <!-- End of header -->
 
     <!-- Programs Page -->
     <section class="page schedule">
@@ -1103,27 +1091,30 @@
                 <li>
                   <a href="#"
                     ><i class="fa fa-phone"></i>
-                    01-000000
+                    <p>1-298292929</p>
                   </a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-mobile"></i> +977-9811111111</a>
+                  <a href="#"
+                    ><i class="fa fa-mobile"></i>
+                    <p>+977-9811111111</p></a
+                  >
                 </li>
                 <li>
                   <a href="#">
                     <i class="fa fa-envelope-o"></i>
-
-                    +977-9811111111</a
+                    <p>+977-9811111111</p></a
                   >
                 </li>
 
                 <li>
                   <a href="#"
-                    ><i class="fa fa-map-marker" aria-hidden="true"></i
-                    >info@yohotv.com</a
+                    ><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p>info@yohotv.com</p></a
                   >
                 </li>
               </ul>
+              <h5>Find Us</h5>
               <div class="social-icon">
                 <a href="#"> <i class="fa fa-facebook"></i> </a>
 
@@ -1131,7 +1122,7 @@
 
                 <a href="#"> <i class="fa fa-twitter"></i> </a>
 
-                <a href="#"><i class="fa fa-chevron-right"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
               </div>
             </div>
           </div>
@@ -1146,6 +1137,7 @@
         </div>
       </div>
     </footer>
+    <!-- End of Footer section -->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -1161,56 +1153,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-
-    <script type="text/javascript">
-      // Display button in scroll down
-      window.addEventListener("scroll", function () {
-        var scroll = document.querySelector(".scrollTop");
-        scroll.classList.toggle("active", window.scrollY > 500);
-      });
-
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-
-      //Main Slider
-      $(document).ready(function () {
-        $(".slider").slick({
-          dots: true,
-          autoplay: true,
-          arrows: true,
-          autoplaySpeed: 3000,
-        });
-      });
-
-      // Presenter Slider
-
-      $(document).ready(function () {
-        $(".presenter-slide").slick({
-          dots: true,
-          autoplay: true,
-          arrows: false,
-          autoplaySpeed: 3000,
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        });
-      });
-
-      // Schedule Slider
-      $(".schedule-item").slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: false,
-        dots: false,
-        variableWidth: true,
-
-        // customPaging: "2px",
-      });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

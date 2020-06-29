@@ -600,6 +600,9 @@ section.slider.slick-initialized.slick-slider.slick-dotted {
   overflow: hidden;
 }
 
+.present .item {
+  margin: auto;
+}
 .presenter .item img,
 .present .item img {
   height: 100%;
@@ -869,6 +872,7 @@ section.pro .card .time {
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
+  margin-bottom: 0.75rem;
 }
 
 /* ==== Schedule Page ==== */
@@ -878,8 +882,7 @@ section.pro .card .time {
 }
 
 .schedule .col-md-2.col-sm-3.col-3 {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 .schedule .day {
   background: var(--primary-color);
@@ -955,10 +958,9 @@ section.pro .card .time {
 
 section .contact-wrapper {
   position: relative;
-  min-width: 1100px;
   min-height: 550px;
   display: flex;
-  z-index: 1000;
+  z-index: 666;
 }
 
 section .contact-wrapper .contact-info {
@@ -997,7 +999,6 @@ section .contact-wrapper .contact-info .info li {
 
 section .contact-wrapper .contact-info .info li span:nth-child(1) {
   width: 40px;
-  /* min-width: 50px; */
   height: 40px;
 }
 section .contact-wrapper .contact-info .info li span:nth-child(1) i {
@@ -1008,14 +1009,11 @@ section .contact-wrapper .contact-info .info li span:nth-child(1) i {
   opacity: 0.5;
   font-size: 1.5rem;
   text-align: center;
-  /* border: 1px solid; */
   padding: 5px;
-  /* border-radius: 50%; */
 }
 
 section .contact-wrapper .contact-info .info li span:nth-child(2) {
   color: #fff;
-  /* margin-left: 10px; */
   font-weight: 300;
   opacity: 0.5;
   margin: auto 0px auto 10px;
@@ -1041,9 +1039,7 @@ section .contact-wrapper .contact-info .social li a {
 }
 
 section .contact-wrapper .contact-info .social li a i {
-  /* filter: invert(1); */
   opacity: 0.5;
-  /* color: #fff; */
   font-size: 1.5rem;
   height: 40px;
   width: 40px;
@@ -1205,6 +1201,25 @@ section
     text-align: center;
     vertical-align: middle;
   }
+
+  .present .col-md-4,
+  .present .col-sm-6,
+  .present .col-6 {
+    padding: 10px;
+  }
+
+  section .contact-wrapper .contact-info {
+    width: 340px;
+    padding: 30px;
+  }
+  section .contact-wrapper .contact-form {
+    padding: 70px 30px;
+    margin-left: 140px;
+    padding-left: 220px;
+  }
+  section .contact-wrapper .contact-form .form-box .input-box.w50 {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1220,6 +1235,22 @@ section
 
   .download .btn1 .button {
     padding: 10px 15px;
+  }
+
+  section .contact-wrapper {
+    flex-direction: column;
+  }
+  section .contact-wrapper .contact-info {
+    position: relative;
+    width: 100%;
+  }
+
+  section .contact-wrapper .contact-form {
+    padding: 70px 30px 10px 30px;
+
+    width: 100%;
+    position: relative;
+    margin-left: 0px;
   }
 }
 
@@ -1302,12 +1333,15 @@ section
     top: -20px;
   }
 
-  .presenter .item,
-  .present .item {
+  .presenter .item {
     height: 350px;
     width: 250px;
   }
 
+  .present .item {
+    height: 100%;
+    width: 100%;
+  }
   .presenter .slick-prev,
   .presenter .slick-next {
     top: -40px;
@@ -1334,5 +1368,14 @@ section
 
   .footer h5 {
     margin-top: 1rem;
+  }
+
+  /* pages */
+
+  section.page {
+    padding: 6rem 0 2rem 0;
+  }
+  .present .item {
+    margin: auto;
   }
 }
