@@ -171,7 +171,7 @@ header.sticky .nav-logo img {
   font-weight: normal;
   color: #fff;
   padding: 0px 0px 5px 0px;
-
+  display: inline-block;
   transition: 0.6s;
   position: relative;
 }
